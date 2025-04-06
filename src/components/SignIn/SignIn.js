@@ -13,9 +13,9 @@ const SignIn = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -23,13 +23,13 @@ const SignIn = () => {
     let formErrors = {};
 
     if (!formData.email.trim()) {
-      formErrors.email = "Email is required";
+      formErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      formErrors.email = "Email is invalid";
+      formErrors.email = 'Email is invalid';
     }
 
     if (!formData.password) {
-      formErrors.password = "Password is required";
+      formErrors.password = 'Password is required';
     }
 
     setErrors(formErrors);
@@ -42,7 +42,7 @@ const SignIn = () => {
     if (validateForm()) {
       // TODO: Implement actual sign-in logic with backend
       console.log('Sign In Submitted', formData);
-      
+
       // Simulated successful sign-in
       alert('Sign In Successful!');
       navigate('/'); // Redirect to home page after sign-in
@@ -54,19 +54,17 @@ const SignIn = () => {
       <div className="signin-wrapper">
         <div className="signin-header">
           <h1 className="signin-title">
-            <span className="logo-main">Sign</span> 
+            <span className="logo-main">Sign</span>
             <span className="logo-accent"> In</span>
           </h1>
-          <p className="signin-subtitle">
-            Welcome back to AlertX
-          </p>
+          <p className="signin-subtitle">Welcome back to Forumers!</p>
         </div>
 
         <form onSubmit={handleSubmit} className="signin-form">
           <div className="form-group">
             <label htmlFor="email">Email Address</label>
-            <input 
-              type="email" 
+            <input
+              type="email"
               id="email"
               name="email"
               value={formData.email}
@@ -78,8 +76,8 @@ const SignIn = () => {
 
           <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input 
-              type="password" 
+            <input
+              type="password"
               id="password"
               name="password"
               value={formData.password}
@@ -95,8 +93,10 @@ const SignIn = () => {
 
           <div className="signin-footer">
             <p>
-              Don't have an account? 
-              <Link to="/signup" className="signup-link"> Sign Up</Link>
+              Don't have an account?{' '}
+              <Link to="/signup" className="signup-link">
+                Sign Up
+              </Link>
             </p>
           </div>
         </form>

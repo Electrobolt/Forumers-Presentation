@@ -1,15 +1,15 @@
 :root {
-  --primary-color: #ff6b00;     /* Vibrant Orange */
-  --secondary-color: #ff8c42;   /* Lighter Orange */
+  --primary-color: #2c3e50;     /* Deep blue-gray */
+  --secondary-color: #2e8555; 
   --accent-color: #ffffff;      /* White */
   --text-color: #333333;
-  --background-color: #fff4e6;  /* Soft orange background */
+  --background-color: #e6fff3;  /* Soft orange background */
 }
 
 .footer {
   background-color: var(--background-color);
   color: var(--text-color);
-  padding: 4rem 0;
+  padding: 2rem 0;
   border-top: 1px solid rgba(255, 107, 0, 0.2);
 }
 
@@ -34,9 +34,9 @@
 .footer-logo {
   display: flex;
   align-items: center;
+  margin: 0;
   font-size: 1.8rem;
   font-weight: 900;
-  margin-bottom: 1rem;
   color: var(--primary-color);
 }
 
@@ -51,9 +51,9 @@
 }
 
 .footer-description {
+  margin: 0;
   color: rgba(51, 51, 51, 0.7);
   line-height: 1.6;
-  margin-bottom: 1rem;
 }
 
 .social-links {

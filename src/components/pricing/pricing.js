@@ -11,13 +11,13 @@ const Pricing = () => {
         monthly: 0,
         yearly: 0
       },
-      description: "Perfect for small projects and individual developers",
+      description: "Perfect for small projects and individual developers.",
       features: [
-        "Jusqu'à 1 000 notifications mensuelles",
-        "Support de base multicanal",
-        "Support communautaire",
-        "Vitesse de livraison standard",
-        "Analytique de base"
+        "Up to 1,000 API requests per month",
+        "Access to core API features",
+        "Community support",
+        "Basic analytics",
+        "Regular updates"
       ],
       recommended: false
     },
@@ -27,15 +27,14 @@ const Pricing = () => {
         monthly: 49,
         yearly: 499
       },
-      description: "Ideal for growing businesses with advanced needs",
+      description: "Ideal for growing businesses with advanced needs.",
       features: [
-        "Jusqu'à 50 000 notifications mensuelles",
-        "Support multicanal complet",
-        "Support par e-mail prioritaire",
-        "Personnalisation avancée",
-        "Métriques d'engagement détaillées",
-        "Capacités de test A/B",
-        "Branding personnalisé"
+        "Up to 50,000 API requests per month",
+        "Access to advanced API features",
+        "Priority email support",
+        "Customizable API responses",
+        "Detailed analytics",
+        "Enhanced security options"
       ],
       recommended: true
     },
@@ -45,17 +44,15 @@ const Pricing = () => {
         monthly: 199,
         yearly: 1999
       },
-      description: "Comprehensive solution for large organizations",
+      description: "Comprehensive solution for large-scale applications.",
       features: [
-        "Notifications mensuelles illimitées",
-        "Support multicanal premium",
-        "Gestionnaire de compte dédié",
-        "Personnalisation avancée alimentée par l'IA",
-        "Tableau de bord analytique complet",
-        "Support d'intégration personnalisé",
-        "Garantie SLA",
-        "Solution en marque blanche",
-        "Fonctionnalités de sécurité avancées"
+        "Unlimited API requests",
+        "Premium 24/7 support",
+        "Dedicated account manager",
+        "Advanced customization options",
+        "SLA guarantees",
+        "Custom integration support",
+        "White-label solutions"
       ],
       recommended: false
     }
@@ -72,7 +69,7 @@ const Pricing = () => {
           <span className="title-highlight">Pricing</span> Plans
         </h2>
         <p className="section-subtitle">
-          Flexible Solutions for Every Business Need
+          Choose the right plan to integrate the Forumers API into your application.
         </p>
         
         <div className="billing-toggle">
@@ -125,7 +122,7 @@ const Pricing = () => {
       </div>
       
       <div className="pricing-footer">
-        <p>Need a custom solution? <a href="#contact">Contact Sales</a></p>
+        <p>Need a custom solution? <a href="#contact">Contact Us</a></p>
       </div>
     </div>
   );

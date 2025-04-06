@@ -1,65 +1,72 @@
 /* HeroSection.js */
 import React from "react";
+import { FaBook, FaUsers, FaComments, FaQuestionCircle, FaShareAlt } from "react-icons/fa";
+import { IoRocket } from "react-icons/io5";
 import "./HeroSection.css";
 
 const HeroSection = () => {
   const openDocumentation = () => {
-    window.open('https://service-de-notication-documentation.vercel.app/', '_blank');
+    window.open('https://forumers-documentation.vercel.app', '_blank');
   };
   const StartDocumentation = () => {
-    window.open('https://service-de-notication-documentation.vercel.app/AboutRacine/Getting_Start/quickStart', '_blank');
+    window.open('https://forumers-documentation.vercel.app/docs/welcome/get-started', '_blank');
   };
   return (
     <section className="hero">
       <div className="hero-content">
         <div className="hero-text">
-          <h1 className="title">
-            <span className="title-highlight">Service de Notifications</span> 
-            <br />à Portée de Main
-          </h1>
+          <div style={{ display:'flex', alignItems:'center'}}>
+            <img src="/Forumers-512.png" alt="Forumers Logo" className="footer-logo-img" style={{height:'225px'}}/>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <>
+              <h1 className="title">
+                <span className="title-highlight">Forumers</span> <br />
+                <span className="title-slogan">Your forum, your way !</span> <br />
+              </h1>
+            </>
+          </div>
           <p className="subtitle">
-            Connectez instantanément vos équipes avec notre API de notifications multicanales. 
-            WhatsApp, Email, SMS, Push - Une solution unifiée pour toutes vos communications.
+            Seamlessly integrate forum functionalities into your application. Build, manage, and engage communities with ease.
           </p>
           <div className="hero-cta">
-            <button className="btn btn-primary" onClick={StartDocumentation}>
-              <span className="btn-icon">🚀</span>
-              Commencer Gratuitement
+            <button className="btn btn-primary"  onClick={StartDocumentation}>
+              <IoRocket  className="btn-icon" />
+              Get Started
             </button>
             <button className="btn btn-secondary" onClick={openDocumentation}>
-              <span className="btn-icon">📡</span>
-              Documentation API
+              <FaBook  className="btn-icon" />
+              Learn More
             </button>
           </div>
           <div className="hero-stats">
             <div className="stat">
-              <span className="stat-number">+100</span>
-              <span className="stat-label">Intégrations</span>
+              <span className="stat-number">+500</span>
+              <span className="stat-label">Communities Created</span>
             </div>
             <div className="stat">
-              <span className="stat-number">99.99%</span>
-              <span className="stat-label">Fiabilité</span>
+              <span className="stat-number">99%</span>
+              <span className="stat-label">Uptime</span>
             </div>
           </div>
         </div>
         <div className="hero-image">
-          <div className="notification-mockup">
-            <div className="notification-channels">
-              <div className="channel whatsapp">
-                <i className="fab fa-whatsapp"></i>
-                <span>WhatsApp</span>
+          <div className="forum-mockup">
+            <div className="forum-channels">
+              <div className="channel green">
+                <FaUsers size={60} />
+                <span>Communities</span>
               </div>
-              <div className="channel email">
-                <i className="fas fa-envelope"></i>
-                <span>Email</span>
+              <div className="channel blue">
+                <FaComments size={60} />
+                <span>Discussions</span>
               </div>
-              <div className="channel sms">
-                <i className="fas fa-sms"></i>
-                <span>SMS</span>
+              <div className="channel orange">
+                <FaQuestionCircle size={60} />
+                <span>Questions</span>
               </div>
-              <div className="channel push">
-                <i className="fas fa-bell"></i>
-                <span>Push</span>
+              <div className="channel purple">
+                <FaShareAlt size={60} />
+                <span>Sharing</span>
               </div>
             </div>
           </div>

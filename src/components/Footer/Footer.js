@@ -1,70 +1,47 @@
 import React from "react";
+import { FaGithub, FaBook } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-grid">
-          <div className="footer-brand">
-            <h2 className="footer-logo">
-              <span className="logo-main">Alert</span>
-              <span className="logo-accent">X</span>
-            </h2>
-            <p className="footer-description">
-              Connectez vos équipes avec des notifications multicanales instantanées et sécurisées.
-            </p>
-            <div className="social-links">
-              <a href="#" className="social-icon" title="Twitter"><i className="fab fa-twitter"></i></a>
-              <a href="#" className="social-icon" title="GitHub"><i className="fab fa-github"></i></a>
-              <a href="#" className="social-icon" title="LinkedIn"><i className="fab fa-linkedin"></i></a>
-              <a href="#" className="social-icon" title="Documentation"><i className="fas fa-book"></i></a>
+        <div style={{display:'flex', justifyContent:'space-between'}}>
+          <div>
+            <div className="footer-brand">
+              <h2 className="footer-logo">
+                <img src="/Forumers-128.png" alt="Forumers Logo" className="footer-logo-img" style={{ height: '80px' }} /> &nbsp; &nbsp;
+                <span className="logo-main">Forumers</span>
+              </h2>
+              <p className="footer-description">
+                Build and manage thriving communities with Forumers API.
+              </p>
+              <div className="social-links">
+                <a href='https://github.com/Electrobolt/Forumers-Presentation' className="social-icon" title="GitHub">
+                  <FaGithub />
+                </a>
+                <a href="https://forumers-documentation.vercel.app" className="social-icon" title="Documentation">
+                  <FaBook />
+                </a>
+              </div>
             </div>
           </div>
 
           <div className="footer-links">
             <div className="link-column">
-              <h4>Canaux</h4>
-              <a href="#">WhatsApp</a>
-              <a href="#">Email</a>
-              <a href="#">SMS</a>
-              <a href="#">Push</a>
-            </div>
-            <div className="link-column">
-              <h4>Développeurs</h4>
-              <a href="#">API Docs</a>
-              <a href="#">Bibliothèques</a>
-              <a href="#">Webhooks</a>
+              <h3>Devs</h3>
+              <a href="https://forumers-documentation.vercel.app/docs/welcome/get-started">Getting Started</a>
+              <a href="https://forumers-documentation.vercel.app">API Docs</a>
               <a href="#">Exemples</a>
             </div>
-            <div className="link-column">
-              <h4>Entreprise</h4>
-              <a href="#">À propos</a>
-              <a href="#">Sécurité</a>
-              <a href="#">Tarification</a>
-              <a href="#">Contact</a>
-            </div>
-          </div>
-
-          <div className="footer-newsletter">
-            <h4>Restez connecté</h4>
-            <p>Inscrivez-vous pour des mises à jour d'API et des conseils de notification</p>
-            <form className="newsletter-form">
-              <input 
-                type="email" 
-                placeholder="Votre email professionnel" 
-                required 
-              />
-              <button type="submit">S'inscrire</button>
-            </form>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2025 AlertX. Tous droits réservés.</p>
+          <p>Copyright ©{new Date().getFullYear()} Forumers, Inc. ENSPY GI2025</p>
           <div className="footer-legal">
-            <a href="#">Politique de confidentialité</a>
-            <a href="#">Conditions d'utilisation</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
           </div>
         </div>
       </div>

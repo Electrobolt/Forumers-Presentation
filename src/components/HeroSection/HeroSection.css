@@ -1,10 +1,10 @@
 /* HeroSection.css */
 :root {
-  --primary-color: #ff6b00;     /* Vibrant Orange */
-  --secondary-color: #ff8c42;   /* Lighter Orange */
+  --primary-color: #2c3e50;     /* Deep blue-gray */
+  --secondary-color: #2e8555; 
   --accent-color: #ffffff;      /* White */
   --text-color: #333333;
-  --background-color: #fff4e6;  /* Soft orange background */
+  --background-color: #e6fff3;  /* Soft orange background */
 }
 
 .hero {
@@ -29,7 +29,7 @@
 
 .title {
   color: var(--text-color);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -38,6 +38,11 @@
 
 .title-highlight {
   color: var(--primary-color);
+}
+
+.title-slogan {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .subtitle {
@@ -50,6 +55,7 @@
 
 .hero-cta {
   display: flex;
+  justify-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
 }
@@ -119,7 +125,7 @@
   align-items: center;
 }
 
-.notification-mockup {
+.forum-mockup {
   background-color: var(--accent-color);
   border-radius: 16px;
   width: 500px;
@@ -131,7 +137,7 @@
   overflow: hidden;
 }
 
-.notification-channels {
+.forum-channels {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
@@ -166,23 +172,23 @@
   color: var(--primary-color);
 }
 
-.whatsapp {
-  background-color: rgba(37, 211, 102, 0.1);
+.green {
+  background-color: #25d3661a;
   color: #25D366;
 }
 
-.email {
-  background-color: rgba(52, 152, 219, 0.1);
+.blue {
+  background-color: #3498db1a;
   color: #3498db;
 }
 
-.sms {
-  background-color: rgba(46, 204, 113, 0.1);
-  color: #2ecc71;
+.orange {
+  background-color: #cc822e1a;
+  color: #cc822e;
 }
 
-.push {
-  background-color: rgba(155, 89, 182, 0.1);
+.purple {
+  background-color: #9b59b61a;
   color: #9b59b6;
 }
 

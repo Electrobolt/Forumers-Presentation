@@ -4,31 +4,58 @@ import './developpers.css';
 const Developpers = () => {
   const developerSections = [
     {
-      title: "Intégration Facile de l'API",
+      title: "Easy API Integration",
       icon: "fa-code",
       paragraphs: [
-        "AlertX fournit une API robuste et conviviale qui peut être intégrée sans effort dans n'importe quel écosystème d'application. Notre documentation complète et nos SDK prennent en charge plusieurs langages de programmation, y compris JavaScript, Python, Java, et plus encore.",
-        "Avec seulement quelques lignes de code, les développeurs peuvent implémenter des capacités de notification puissantes, réduisant ainsi le temps et la complexité du développement. Notre API RESTful garantit une communication fluide et un minimum de surcharge.",
-        "Nous offrons des exemples de code étendus, une documentation interactive et un support dédié pour aider les développeurs à démarrer rapidement et efficacement."
+        "Forumers provides a developer-friendly API that can be integrated seamlessly into your application. Our detailed documentation and examples make it easy to get started.",
+        "With just a few lines of code, you can enable forum management features such as creating communities, organizing categories, and managing posts and comments.",
+        "We ensure a smooth integration process with clear guidelines and support for RESTful API standards."
       ]
     },
     {
-        title: "Portée Mondiale & Internationalisation",
-        icon: "fa-globe",
-        paragraphs: [
-          "Brisez les barrières linguistiques avec les fonctionnalités avancées d'internationalisation d'AlertX. Notre plateforme prend en charge plus de 50 langues et fournit des services de traduction automatique pour le contenu des notifications.",
-          "Personnalisez les notifications en fonction des préférences linguistiques des utilisateurs, des paramètres régionaux et des nuances culturelles. Notre moteur de localisation intelligent garantit que vos messages résonnent avec un public mondial.",
-          "Gérez sans effort la communication multilingue sans surcharge de développement supplémentaire. AlertX gère la complexité de la messagerie internationale."
-        ]
+      title: "Community Management Tools",
+      icon: "fa-users",
+      paragraphs: [
+        "Forumers offers tools to help you manage your communities effectively. Create public or private communities tailored to your audience's needs.",
+        "Organize discussions into categories to keep conversations structured and easy to navigate.",
+        "Enable features like post moderation and user roles to maintain a healthy and engaging environment for your users."
+      ]
     },
     {
-        title: "Métriques d'Engagement des Utilisateurs",
-        icon: "fa-chart-line",
-        paragraphs: [
-          "Obtenez des informations approfondies sur les performances de vos notifications grâce à nos analyses d'engagement complètes. Suivez les taux de livraison, les taux d'ouverture, les taux de clics et les interactions des utilisateurs en temps réel.",
-          "Notre tableau de bord des métriques avancées fournit des données granulaires sur le comportement des utilisateurs, vous aidant à optimiser votre stratégie de communication. Comprenez quels messages résonnent, à quels moments et avec quels segments d'utilisateurs.",
-          "Exploitez des recommandations alimentées par l'apprentissage automatique pour améliorer l'efficacité de vos notifications et augmenter l'engagement des utilisateurs dans votre application."
-        ]
+      title: "User Engagement Features",
+      icon: "fa-comments",
+      paragraphs: [
+        "Encourage meaningful interactions with features like posts, comments, likes, and replies. These tools help foster active and engaging discussions within your community.",
+        "Forumers makes it easy to track user activity and participation, helping you understand how your community interacts with your platform.",
+        "Build a collaborative environment where users can share experiences, ask questions, and provide feedback."
+      ]
+    },
+    {
+      title: "Customizable Forum Experience",
+      icon: "fa-cogs",
+      paragraphs: [
+        "Tailor your forums to match your application's branding and user needs. Customize categories, user permissions, and more.",
+        "Enable or disable features based on your community's requirements, ensuring a personalized experience for your users.",
+        "Forumers provides flexibility to adapt to your specific use case, whether you're building a small community or a large-scale forum."
+      ]
+    },
+    {
+      title: "Reliable and Scalable Infrastructure",
+      icon: "fa-server",
+      paragraphs: [
+        "Forumers is built on a reliable infrastructure designed to handle growing communities and high traffic volumes.",
+        "Our API ensures consistent performance with low latency, so your users can enjoy a seamless experience.",
+        "Focus on building your community while we take care of the backend scalability and reliability."
+      ]
+    },
+    {
+      title: "Developer Support",
+      icon: "fa-hands-helping",
+      paragraphs: [
+        "We provide dedicated support to help developers integrate and use the Forumers API effectively.",
+        "Access our documentation, FAQs, and example use cases to get started quickly.",
+        "If you encounter any issues, our support team is here to assist you every step of the way."
+      ]
     }
   ];
 
@@ -39,7 +66,7 @@ const Developpers = () => {
           For <span className="title-highlight">Developers</span>
         </h2>
         <p className="section-subtitle">
-          Powerful Tools, Seamless Integration, Global Reach
+          Build, manage, and scale your forums with ease using the Forumers API.
         </p>
       </div>
       

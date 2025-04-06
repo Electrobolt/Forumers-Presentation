@@ -1,10 +1,10 @@
 /* FeaturesSection.css */
 :root {
-  --primary-color: #ff8c42;     /* Softer Orange */
-  --secondary-color: #ffac6b;   /* Even Lighter Orange */
+    --primary-color: #2c3e50;     /* Deep blue-gray */
+  --secondary-color: #2e8555;    /* Even Lighter Orange */
   --accent-color: #ffffff;      /* White */
-  --text-color: #e66514c2;
-  --background-color: #fff4e6;  /* Very Soft orange background */
+  --text-color: #2e8555a2;    /* Soft dark blue-gray */
+  --background-color: #e6fff3;  /* Very Soft orange background */
 }
 
 .features {

@@ -10,7 +10,6 @@ import Developpers from './components/Developpers/developpers';
 import SignUp from './components/SignUp/SignUp';
 import SignIn from './components/SignIn/SignIn';
 import Footer from './components/Footer/Footer';
-import Temoignages from './components/temoignages/temoignages';
 import './App.css';
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
               <FeaturesSection />
               <Pricing />
               <Contributors />
-              <Temoignages />
               <Footer />
             </>
           } />

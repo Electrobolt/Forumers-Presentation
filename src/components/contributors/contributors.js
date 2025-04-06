@@ -4,42 +4,42 @@ import './contributors.css';
 const Contributors = () => {
   const contributorsData = [
     {
-      name: "Alain Gérard",
-      role: "Team Leader",
-      image: "/Alain.jpeg",
-      description: "Manager chevronné guidant l'équipe vers l'excellence stratégique.",
+      name: "Maxime CHEMI",
+      role: "Team Leader & Backend Developer",
+      image: "/Maxime.jpg",
+      description: "Specialized in building the backend system for the Forumers API.",
+      description2: "#",
+      description3: "#",
+      linkedin: "#",
+      github: "https://github.com/Arhychem"
+    },
+    {
+      name: "Pharell EDO",
+      role: "Second & Frontend Developer",
+      image: "/Nicolas.jpg",
+      description: "Focused on creating intuitive user interfaces for the Forumers default platform.",
+      description2: "#",
+      description3: "#",
+      linkedin: "#",
+      github: "https://github.com/Electrobolt"
+    },
+    {
+      name: "Nelda KWABOU",
+      role: "Documentation Provider",
+      image: "/Nelda2.jpg",
+      description: "Focused on User experience and documentation",
+      description2: "#",
+      description3: "#",
       linkedin: "#",
       github: "#"
     },
     {
-      name: "Arthur Negoum",
-      role: "Frontend & SMS",
-      image: "/arthur1.jpeg",
-      description: "Architecte du design frontend et expert en services SMS.",
-      linkedin: "https://www.linkedin.com/in/yves-arthur-negoum-wouatedem-854967302/",
-      github: "https://github.com/arthurogg"
-    },
-    {
-      name: "Varnel Nguiffo",
-      role: "WhatsApp Notifications",
-      image: "/nguiffo.jpeg",
-      description: "Spécialiste des notifications WhatsApp et intégrations API.",
-      linkedin: "https://github.com/Ngakou-Rick",
-      github: "https://github.com/Ngakou-Rick"
-    },
-    {
-      name: "Audain Meli",
-      role: "Email Service",
-      image: "/audain.jpeg",
-      description: "Expert en solutions de communication électronique personnalisées.",
-      linkedin: "#",
-      github: "https://github.com/Audain672"
-    },
-    {
-      name: "Elsa Nanfah",
-      role: "Push Notifications",
-      image: "/elsa1.jpeg",
-      description: "Garantit la robustesse et l'efficacité des notifications push.",
+      name: "Ulrich TAKOU",
+      role: "",
+      image: "/users.png",
+      description: "Melvis TEUGUEM",
+      description2: "Hilaire NKODO",
+      description3: "Jovani OSSOMBE",
       linkedin: "#",
       github: "#"
     }
@@ -49,10 +49,10 @@ const Contributors = () => {
     <div className="contributors-page">
       <div className="contributors-header">
         <h1 className="section-title">
-          Our<span className="title-highlight"> Contributors</span>
+          Meet Our <span className="title-highlight">Contributors</span>
         </h1>
         <p className="section-subtitle">
-          Les innovateurs derrière AlertX, unis par la passion de la notification intelligente
+          The talented team behind the Forumers API, dedicated to building a seamless forum management experience.
         </p>
       </div>
       
@@ -70,13 +70,23 @@ const Contributors = () => {
               <h3 className="contributor-name">{contributor.name}</h3>
               <p className="contributor-role">{contributor.role}</p>
               <p className="contributor-description">{contributor.description}</p>
+                {contributor.description2 !== "#" && (
+                  <p className="contributor-description">{contributor.description2}</p>
+                )}
+                {contributor.description3 !== "#" && (
+                  <p className="contributor-description">{contributor.description3}</p>
+                )}
               <div className="contributor-socials">
-                <a href={contributor.linkedin} className="social-link">
-                  <i className="fab fa-linkedin"></i>
-                </a>
-                <a href={contributor.github} className="social-link">
-                  <i className="fab fa-github"></i>
-                </a>
+                {contributor.linkedin !== "#" && (
+                  <a href={contributor.linkedin} className="social-link" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-linkedin"></i>
+                  </a>
+                )}
+                {contributor.github !== "#" && (
+                  <a href={contributor.github} className="social-link" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-github"></i>
+                  </a>
+                )}
               </div>
             </div>
           </div>
