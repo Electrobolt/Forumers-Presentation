@@ -46,7 +46,7 @@ const About = () => {
       <div className="about-grid">
         {aboutSections.map((section, index) => (
           <div key={index} className="about-card">
-            <div className="about-icon-container"><section.icon size={'40px'}/></div>
+            <div className="about-icon-container"><section.icon size={'50px'}/></div>
             <div className="about-content">
               <h3 className="about-title">{section.title}</h3>
               {section.paragraphs.map((paragraph, pIndex) => (

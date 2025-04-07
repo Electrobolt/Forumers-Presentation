@@ -8,10 +8,9 @@
 
 .about-section {
   max-width: 1400px;
-  margin: 0 auto;
-  padding: 6rem 40px;
+  margin: 0;
+  padding: 6rem 0;
   background-color: var(--accent-color);
-  overflow-x: auto;
 }
 
 .about-header {
@@ -102,12 +101,16 @@
 }
 
 @media (max-width: 1024px) {
+  .about-section {
+    margin: 0;
+  }
   .about-grid {
     grid-template-columns: 1fr;
+    margin: 0;
+
   }
 
   .about-card {
-    width: 100%;
     max-width: 600px;
     margin-bottom: 2rem;
   }

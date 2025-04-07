@@ -1,15 +1,15 @@
 /* HeroSection.css */
 :root {
-  --primary-color: #2c3e50;     /* Deep blue-gray */
-  --secondary-color: #2e8555; 
-  --accent-color: #ffffff;      /* White */
+  --primary-color: #2c3e50;
+  --secondary-color: #2e8555;
+  --accent-color: #ffffff;
   --text-color: #333333;
-  --background-color: #e6fff3;  /* Soft orange background */
+  --background-color: #e6fff3;
 }
 
 .hero {
   background-color: var(--background-color);
-  padding: 6rem 0;
+  padding: 4rem 1rem;
 }
 
 .hero-content {
@@ -18,22 +18,32 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 4rem;
-  padding: 0 40px;
+  gap: 2rem;
 }
 
 .hero-text {
   display: flex;
+  align-items: center;
   flex-direction: column;
+}
+
+.hero-logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-logo {
+  height: 150px;
 }
 
 .title {
   color: var(--text-color);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
-  letter-spacing: -1px;
+  margin-bottom: 1rem;
 }
 
 .title-highlight {
@@ -50,21 +60,20 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 2rem;
-  max-width: 500px;
 }
 
 .hero-cta {
   display: flex;
-  justify-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .btn {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 8px;
   font-weight: 600;
   border: none;
@@ -100,7 +109,8 @@
 
 .hero-stats {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .stat {
@@ -110,7 +120,7 @@
 
 .stat-number {
   color: var(--primary-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -128,8 +138,9 @@
 .forum-mockup {
   background-color: var(--accent-color);
   border-radius: 16px;
-  width: 500px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,9 +151,9 @@
 .forum-channels {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .channel {
@@ -150,7 +161,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 12px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -158,8 +169,8 @@
 }
 
 .channel:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(44, 62, 80, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(44, 62, 80, 0.1);
 }
 
 .channel i {
@@ -210,12 +221,12 @@
     font-size: 2.5rem;
   }
 
-  .notification-mockup {
+  .forum-mockup {
     width: 100%;
     height: 300px;
   }
 
-  .notification-channels {
+  .forum-channels {
     grid-template-columns: 1fr;
   }
 }

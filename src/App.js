@@ -25,13 +25,13 @@ function App() {
               <Developpers />
               <FeaturesSection />
               <Pricing />
-              <Contributors />
-              <Footer />
             </>
           } />
+          <Route path="/contributors" element={<Contributors />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

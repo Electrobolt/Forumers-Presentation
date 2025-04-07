@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div style={{display:'flex', justifyContent:'space-between'}}>
+        <div className="footer-group" style={{display:'flex', justifyContent:'space-between'}}>
           <div>
             <div className="footer-brand">
               <h2 className="footer-logo">

@@ -1,20 +1,23 @@
 :root {
-  --primary-color: #2c3e50;     /* Deep blue-gray */
-  --secondary-color: #2e8555;   /* Soft, muted light orange */
-  --accent-color: #ecf0f1;      /* Very light gray */
-  --text-color: #34495e;        /* Soft dark blue-gray */
-  --background-color: #ffffff;  /* Pure white */
-  --light-orange: #fff4e6;      /* Very subtle orange background */
+  --primary-color: #2c3e50;
+  --secondary-color: #2e8555;
+  --accent-color: #ffffff;
+  --text-color: #34495e;
+  --background-color: #ffffff;
+  --background-color2: #e6fff3;
 }
 
 .header {
   background: linear-gradient(
     135deg, 
-    rgba(255, 154, 95, 0.05) 0%, 
-    rgba(255, 154, 95, 0.02) 100%
+    #5dff8033 0%, 
+    #5eb6ff33 100%
   );
+  backdrop-filter: blur(15px);
   padding: 10px 0;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   box-shadow: 0 2px 4px rgba(44, 62, 80, 0.05);
 }
 
@@ -27,7 +30,7 @@
   height: 100%;
   background: linear-gradient(
     45deg, 
-    rgba(255, 154, 95, 0.03) 0%, 
+    rgba(95, 255, 186, 0.03) 0%, 
     transparent 100%
   );
   z-index: 1;
@@ -40,7 +43,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 30px;
   position: relative;
   z-index: 2;
 }
@@ -110,12 +113,13 @@
   gap: 1rem;
 }
 
-.btn {
+.btn-h {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   padding: 10px 20px;
+  border: transparent;
   border-radius: 8px;
   font-weight: 600;
   text-transform: uppercase;
@@ -132,10 +136,10 @@
     var(--secondary-color) 0%, 
     color-mix(in srgb, var(--secondary-color) 90%, white) 100%
   );
-  color: var(--primary-color);
+  color: white;
   box-shadow: 
-    0 10px 20px rgba(255, 154, 95, 0.2),
-    0 5px 10px rgba(255, 154, 95, 0.1);
+    0 10px 20px #5fffcc34,
+    0 5px 10px #5fffcc1a;
 }
 
 .btn-login::before {
@@ -158,8 +162,8 @@
 .btn-login:hover {
   transform: translateY(-3px);
   box-shadow: 
-    0 15px 25px rgba(255, 154, 95, 0.25),
-    0 8px 15px rgba(255, 154, 95, 0.15);
+    0 15px 25px #5fffcc40,
+    0 8px 15px #5fffcc26;
 }
 
 .btn-login:hover::before {
@@ -175,9 +179,7 @@
 .btn-signup {
   background-color: transparent;
   color: var(--primary-color);
-  border: 2px solid var(--primary-color);
   position: relative;
-  padding: 10px 20px;
   overflow: hidden;
   z-index: 1;
   transition: color 0.4s ease;
@@ -193,8 +195,8 @@
   bottom: -2px;
   background: linear-gradient(
     45deg, 
-    var(--primary-color), 
-    var(--secondary-color)
+    var(--secondary-color), 
+    #429eb3
   );
   z-index: -1;
   opacity: 0;
@@ -242,107 +244,106 @@
 
 .mobile-menu-toggle {
   display: none;
+  cursor: pointer;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 1024px) {
-  .header-container {
-    padding: 15px 20px;
-  }
+.auth-icon {
+  display: none;
+}
 
+.hamburger {
+  display: none;
+  width: 1.2rem;
+  height: 3px;
+  margin-left: 15px;
+  background-color: var(--primary-color);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+  left: 0;
+}
+
+.hamburger::after {
+  bottom: -8px;
+  left: 0;
+}
+
+.hamburger.open {
+  transform: rotate(45deg);
+}
+
+.hamburger.open::before {
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.hamburger.open::after {
+  right: 0;
+  bottom: 0;
+  transform: rotate(-90deg);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
   .navigation {
     display: none;
   }
 
   .navigation.menu-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--background-color);
-    box-shadow: 0 4px 6px rgba(255, 107, 0, 0.1);
+    background-color: var(--background-color2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
   }
 
   .nav-links {
     flex-direction: column;
     align-items: center;
-    padding: 20px 0;
-  }
-
-  .mobile-menu-toggle {
-    display: block;
-    cursor: pointer;
-    width: 30px;
-    height: 20px;
-    position: relative;
+    gap: 15px;
   }
 
   .hamburger {
     display: block;
-    width: 100%;
-    height: 3px;
-    background-color: var(--primary-color);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
   }
 
-  .hamburger::before,
-  .hamburger::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background-color: var(--primary-color);
-    transition: all 0.3s ease;
-  }
-
-  .hamburger::before {
-    top: -10px;
-  }
-
-  .hamburger::after {
-    bottom: -10px;
-  }
-
-  .hamburger.open {
-    transform: rotate(45deg);
-  }
-
-  .hamburger.open::before {
-    top: 0;
-    transform: rotate(90deg);
-  }
-
-  .hamburger.open::after {
-    bottom: 0;
-    transform: rotate(-90deg);
+  .btn-h {
+    padding: 10px 12px;
   }
 
   .auth-buttons {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    padding: 20px 0;
+    margin-left: 10px;
+    gap: 5px;
   }
 
-  .btn {
-    width: 80%;
-    justify-content: center;
-    margin: 10px 0;
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .auth-buttons {
-    flex-direction: column;
-    width: 100%;
+  .auth-text {
+    display: none; /* Hide text on mobile */
   }
 
-  .btn {
-    width: 100%;
+  .auth-icon {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
   }
 }
