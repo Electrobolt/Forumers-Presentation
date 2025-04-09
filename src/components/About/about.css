@@ -8,7 +8,7 @@
 
 .about-section {
   max-width: 1400px;
-  margin: 0;
+  margin: 0 auto;
   padding: 6rem 0;
   background-color: var(--accent-color);
 }
@@ -66,6 +66,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--primary-color);
   background-color: var(--accent-color);
   border-radius: 50%;
 }
@@ -89,7 +90,7 @@
 }
 
 .about-paragraph {
-  color: rgba(52, 73, 94, 0.8);
+  color: #34495ecc;
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 1rem;
@@ -102,16 +103,12 @@
 
 @media (max-width: 1024px) {
   .about-section {
-    margin: 0;
-  }
-  .about-grid {
-    grid-template-columns: 1fr;
-    margin: 0;
-
+    margin: 0 auto;
+    align-items: center;
   }
 
   .about-card {
-    max-width: 600px;
+    max-width: 100%;
     margin-bottom: 2rem;
   }
 }
@@ -119,6 +116,12 @@
 @media (max-width: 768px) {
   .about-section {
     padding: 4rem 20px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    margin: 0;
   }
 
   .section-title {

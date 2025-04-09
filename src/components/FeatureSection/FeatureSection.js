@@ -32,7 +32,7 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="features">
+    <section className="features" id="features">
       <div className="features-container">
         <div className="features-header">
           <h2 className="section-title">Key  <span className="title-highlight">Features</span></h2>

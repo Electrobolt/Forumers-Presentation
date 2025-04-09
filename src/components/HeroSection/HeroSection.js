@@ -1,7 +1,7 @@
-/* HeroSection.js */
 import React from "react";
 import { FaBook, FaUsers, FaComments, FaQuestionCircle, FaShareAlt } from "react-icons/fa";
 import { IoRocket } from "react-icons/io5";
+import { Showcase } from './Showcase'
 import "./HeroSection.css";
 
 const HeroSection = () => {
@@ -46,28 +46,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="hero-image">
-          <div className="forum-mockup">
-            <div className="forum-channels">
-              <div className="channel green">
-                <FaUsers size={60} />
-                <span>Communities</span>
-              </div>
-              <div className="channel blue">
-                <FaComments size={60} />
-                <span>Discussions</span>
-              </div>
-              <div className="channel orange">
-                <FaQuestionCircle size={60} />
-                <span>Questions</span>
-              </div>
-              <div className="channel purple">
-                <FaShareAlt size={60} />
-                <span>Sharing</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Showcase />
       </div>
     </section>
   );

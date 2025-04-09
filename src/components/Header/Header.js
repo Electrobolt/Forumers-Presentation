@@ -43,7 +43,27 @@ const Header = () => {
         <nav className={`navigation ${isMenuOpen ? 'menu-open' : ''}`}>
           <ul className="nav-links">
             <li><Link to="/" onClick={toggleMenu}>Welcome</Link></li>
-            <li><a href="#features" onClick={(e) => { handleFeaturesScroll(e); toggleMenu(); }}>Features</a></li>
+            <li>
+              <Link 
+                to="/#features" 
+                onClick={(e) => { 
+                  e.preventDefault(); 
+                  navigate('/'); 
+                  setTimeout(() => {
+                    const featuresSection = document.querySelector('#features');
+                    if (featuresSection) {
+                      featuresSection.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                      });
+                    }
+                  }, 0);
+                  toggleMenu(); 
+                }}
+              >
+                Features
+              </Link>
+            </li>
             <li><Link to="/contributors" onClick={toggleMenu}>Contributors</Link></li>
           </ul>
         </nav>
